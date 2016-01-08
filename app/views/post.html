@@ -1,0 +1,12 @@
+<div class="item">
+    <a class="item__link" href="{{post.link}}" target="_blank">
+        <img ng-src="{{post.image}}" alt="post thumbnail" class="item__img">
+        <h1 class="item__title">{{post.headline}}</h1>
+    </a>
+    <p class="item__info">
+        <a href="http://www.freecodecamp.com/{{post.author.username}}" class="item__author">{{post.author.username}}</a>
+        <span class="item__time">&bull; posted {{post.timePosted | date:'mediumDate'}}</span>
+        <span class="item__likes">&bull; {{post.rank}} likes</span>
+    </p>
+</div>
+<!-- /.item -->

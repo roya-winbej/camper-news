@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Camper News</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="camperNewsApp">
+
+    <div class="wrapper" ng-controller="MainCtrl">
+        <header class="main-header">
+          <div class="container">
+            <div class="logo">
+              <a href="#"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            <!-- /.logo -->
+            <div class="main-header__title pull-right">
+              <h1 class="title">Camper News</h1>
+              <!-- /.title -->
+            </div>
+            <!-- /.main-header__title -->
+          </div>
+          <!-- /.container -->
+        </header>
+        <!-- /.main-header -->
+        <div class="content">
+          <div class="container">
+            <div class="content__items">
+                <camp-news ng-repeat="post in posts"></camp-news>
+            </div>
+            <!-- /.content__items -->
+            <div class="content__more">
+              <p><a href="" ng-click="loadMore()">Load More...</a></p>
+            </div>
+            <!-- /.content__more -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.wrapper -->
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/services/campernews.js"></script>
+        <script src="scripts/directives/campnews.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
